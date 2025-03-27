@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Farming Kit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="control.html">Control</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="info.html">Info</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <h1 class="hero-title">🌱 Urban Farming Kit Dashboard</h1>
+        <p class="hero-subtitle">Monitor and control your urban farm with ease</p>
+    </header>
+
+    <div class="container text-center">
+        <div class="alert alert-secondary">
+            WebSocket Status: <span id="ws-status" class="fw-bold text-danger">Disconnected</span>
+        </div>
+
+        <!-- Sensor Data Section -->
+        <h2 class="section-title">📊 Sensor Data</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card sensor-card">
+                    <div class="card-header bg-primary text-white">🌡 Temperature</div>
+                    <div class="card-body">
+                        <h2 id="temperature">--</h2>
+                        <p>°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card sensor-card">
+                    <div class="card-header bg-info text-white">💧 Humidity</div>
+                    <div class="card-body">
+                        <h2 id="humidity">--</h2>
+                        <p>%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card sensor-card">
+                    <div class="card-header bg-success text-white">🧪 pH Level</div>
+                    <div class="card-body">
+                        <h2 id="ph">--</h2>
+                        <p>pH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-4">
+                <div class="card sensor-card">
+                    <div class="card-header bg-warning text-white">🔆 Light Intensity</div>
+                    <div class="card-body">
+                        <h2 id="light">--</h2>
+                        <p>Lux</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card sensor-card">
+                    <div class="card-header bg-dark text-white">⚡ Electrical Conductivity</div>
+                    <div class="card-body">
+                        <h2 id="ec">--</h2>
+                        <p>μS/cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Device Control Section -->
+        <h2 class="section-title">🔧 Device Control</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <button id="led-btn" class="btn btn-danger w-100 my-2">Toggle LED</button>
+                <img src="led-image.jpg" id="led-indicator" class="img-fluid control-image">
+                <p class="fw-bold">LED Status: <span id="led-status" class="text-danger">OFF</span></p>
+            </div>
+            <div class="col-md-6">
+                <button id="pump-btn" class="btn btn-success w-100 my-2">Toggle Water Pump</button>
+                <img src="pump-image.jpg" id="pump-indicator" class="img-fluid control-image">
+                <p class="fw-bold">Pump Status: <span id="pump-status" class="text-danger">OFF</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

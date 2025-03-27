@@ -1,0 +1,249 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #74ebd5;
+    text-shadow: 0 0 5px white;
+    border-bottom: 2px solid #74ebd5;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.3); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Sensor Data & Controls */
+.sensor-data, .controls {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.sensor-data:hover, .controls:hover {
+    transform: scale(1.02);
+}
+
+/* Images */
+.hero-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 40px;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.toggle-btn {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+#led-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+#pump-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.toggle-btn:hover {
+    filter: brightness(90%);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-btn:active {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* WebSocket Status */
+.status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#ws-status {
+    font-weight: bold;
+    color: red;
+    transition: color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .sensor-data, .controls {
+        width: 90%;
+    }
+}
+
+.control-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.control-image {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.control-image:hover {
+    transform: scale(1.1);
+}
+
+/* Grid Layout for Sensor Data */
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Sensor Data Cards */
+.sensor-card {
+    background: #f9f9f9; /* Light gray for better contrast */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.sensor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sensor Icons */
+.sensor-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Adjusted gradient for distinction */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="control.html">Control</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="info.html">Info</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sensor Data Container -->
+    <div class="container">
+        <h2>📊 Live Sensor Data</h2>
+        <div class="sensor-grid">
+            <div class="sensor-card">
+                <img src="images/temperature.png" class="sensor-icon" alt="Temperature">
+                <p><strong>Temperature:</strong> <span id="temperature">--</span> °C</p>
+            </div>
+            <div class="sensor-card">
+                <img src="images/humidity.png" class="sensor-icon" alt="Humidity">
+                <p><strong>Humidity:</strong> <span id="humidity">--</span> %</p>
+            </div>
+            <div class="sensor-card">
+                <img src="images/ph.png" class="sensor-icon" alt="pH Level">
+                <p><strong>pH Level:</strong> <span id="ph">--</span></p>
+            </div>
+            <div class="sensor-card">
+                <img src="images/light.png" class="sensor-icon" alt="Light">
+                <p><strong>Light Intensity:</strong> <span id="light">--</span> lux</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
